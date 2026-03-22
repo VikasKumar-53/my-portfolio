@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q^yh#!%fd-6^%mnonp2e$z162thm!$#sv#8!5xvmyox#hg92yp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -131,6 +131,6 @@ EMAIL_USE_TLS = True
 
 # TODO: Replace these with your actual email and 16-character App Password
 # Do NOT use your regular Gmail password.
-EMAIL_HOST_USER = 'vikaskumar63061@gmail.com'
-EMAIL_HOST_PASSWORD = 'YOUR_APP_PASSWORD_HERE' 
+EMAIL_HOST_USER = 'vikaskumar63061@gmail.com' 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
